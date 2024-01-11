@@ -1,0 +1,42 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+<h1 mat-dialog-title>Add Company</h1>
+
+<div mat-dialog-content class="mat-dialog-content">
+    <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>Company Name</mat-label>
+        <input [disabled]="loading" [(ngModel)]="newCompany.companyName" matInput type="text" placeholder="Company Name" required>
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content class="mat-dialog-content">
+    <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>E-Mail</mat-label>
+        <input [disabled]="loading" [(ngModel)]="newCompany.mail" matInput type="email" placeholder="E-Mail">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content class="mat-dialog-content">
+    <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input [disabled]="loading" [(ngModel)]="newCompany.phoneNumber" matInput type="tel" placeholder="Phone Number">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content class="mat-dialog-content">
+    <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>Website</mat-label>
+        <input [disabled]="loading" [(ngModel)]="newCompany.website" matInput type="url" placeholder="Website">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-content class="mat-dialog-content">
+    <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>Company Headquarters</mat-label>
+        <input [disabled]="loading" [(ngModel)]="newCompany.companyHeadquarters" matInput type="text" placeholder="Company Headquarters">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button [disabled]="loading" mat-button (click)="dialogRef.close()">Cancel</button>
+    <button [disabled]="loading" mat-button (click)="saveCompany()" cdkFocusInitial>Save</button>
+</div>

@@ -1,0 +1,34 @@
+<div class="dashboard-content">
+    <div routerLink="projects" class="container projects-volume">
+        <h1>Projects Volume</h1>
+        <canvas class="projects-volume-canvas" baseChart
+                [labels]="doughnutChartLabels"
+                [datasets]="doughnutChartDatasets"
+                [options]="doughnutChartOptions"
+                [legend]="true"
+                [type]="'doughnut'">
+        </canvas>
+    </div>
+
+    <div class="container company-segmentation">
+        <h1>Industry-specific Company Segmentation</h1>
+        <canvas class="company-segmentation-canvas" baseChart
+                [datasets]="polarAreaChartDatasets"
+                [labels]="polarAreaChartLabels"
+                [legend]="polarAreaLegend"
+                [options]="polarAreaOptions"
+                [type]="'polarArea'">
+        </canvas>
+    </div>
+
+    <div class="container project-orders">
+        <h1>Project Orders</h1>
+        <canvas class="project-orders-canvas" baseChart
+                [data]="barChartData"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [type]="'bar'">
+        </canvas>
+    </div>
+</div>

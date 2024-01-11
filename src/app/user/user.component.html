@@ -1,0 +1,27 @@
+<mat-form-field>
+    <mat-label>Search</mat-label>
+    <input type="string" [(ngModel)]="searchInput" matInput>
+    <button *ngIf="searchInput" matSuffix mat-icon-button aria-label="Clear" (click)="searchInput=''">
+        <mat-icon color="delete">close</mat-icon>
+    </button>
+</mat-form-field>
+
+<mat-card>
+    <table class="user-table">
+        <tr>
+            <th>Name</th>
+            <th>E-Mail</th>
+            <th>City</th>
+        </tr>
+
+        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.customIdName]">
+            <td *ngIf="searchFunction(user)">{{ user.firstName }} {{ user.lastName }}</td>
+            <td *ngIf="searchFunction(user)"> {{ user.email }}</td>
+            <td *ngIf="searchFunction(user)"> {{ user.city }}</td>
+        </tr>
+    </table>
+</mat-card>
+
+<button (click)="openDialog()" class="add-user-button" mat-fab matTooltip="Add User">
+    <mat-icon>person_add</mat-icon>
+</button>

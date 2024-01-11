@@ -1,0 +1,83 @@
+.deals-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.02);
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    display: block;
+    min-height: 200px;
+    width: 300px;
+    margin: 20px 0;
+    padding: 15px;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
+                0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.4);
+}
+  
+.card {
+    border: none;
+    background-color: #fff;
+    border-radius: 18px;
+    white-space: normal;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    min-height: 50px;
+    overflow: hidden;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.card:hover {
+    box-shadow: 2px 4px 16px rgba(0, 0,0 , 0.16);
+    transform: scale3d(1.01, 1.01, 1.01);
+    cursor: pointer;
+}
+  
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+  
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+  
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+  
+.example-box:last-child {
+    border: none;
+}
+  
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.add-card-button {
+    position: fixed;
+    right: 56px;
+    bottom: 56px;
+    background-color: rgb(81, 117, 148);
+}
+  

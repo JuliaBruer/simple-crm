@@ -1,0 +1,34 @@
+.dialog-add-user {
+    overflow: auto;
+    max-height: 600px;
+}
+
+.first-mat-dialog-content {
+    padding-top: 5px;
+}
+
+.mat-dialog-content {
+    padding: 5px 24px 5px 24px;
+}
+
+.error {
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
